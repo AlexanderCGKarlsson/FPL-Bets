@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/updateCache",
+      "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/updateDatabase",
+      "schedule": "0 8 * * *"
+    }
+  ]
+}
