@@ -72,35 +72,36 @@ If you do decide not to use the Telegram, any code utilizing it should be commen
 
 ## Project Structure
 
+```
 src/
 ├── app/
-│ ├── api/
-│ │ ├── convert-image/
-│ │ │ └── route.ts
-│ │ ├── cron/
-│ │ │ └── updateCache
-│ │ │      └── route.tsx
-│ │ │ └── updateDatabase
-│ │ │      └── route.tsx
-│ │ ├── teamLogo/[id]
-│ │ │ └── route.tsx
-│ │ ├── menu/
-│ │ │ └── route.tsx
-│ │ ├── og/
-│ │ │ └── route.tsx
-│ ├── components/
-│ │ └── screens/
-│ │ ├── DefaultLayout.tsx
-│ │ ├── LayoutComponents.tsx
-│ │ ├── WelcomePlayerLayout.tsx
-│ │ ├── MatchupLayout.tsx
-│ ├── page.tsx
-│ ├── layout.tsx
-├── lib/
-│ ├── db.ts
-│ ├── matchData.ts
-│ └── dbOperations.ts
-
+│   ├── api/
+│   │   ├── convert-image/
+│   │   │   └── route.ts
+│   │   ├── cron/
+│   │   │   ├── updateCache/
+│   │   │   │   └── route.tsx
+│   │   │   └── updateDatabase/
+│   │   │       └── route.tsx
+│   │   ├── teamLogo/[id]/
+│   │   │   └── route.tsx
+│   │   ├── menu/
+│   │   │   └── route.tsx
+│   │   └── og/
+│   │       └── route.tsx
+│   ├── components/
+│   │   └── screens/
+│   │       ├── DefaultLayout.tsx
+│   │       ├── LayoutComponents.tsx
+│   │       ├── WelcomePlayerLayout.tsx
+│   │       └── MatchupLayout.tsx
+│   ├── page.tsx
+│   └── layout.tsx
+└── lib/
+    ├── db.ts
+    ├── matchData.ts
+    └── dbOperations.ts
+```
 
 ## Deploy to Production
 - Do not forget to set `NEXT_PUBIC_URL`in the config.ts otherwise you will get error message: "validateFrameEmbed 400 - Unable to fetch image, upstream server error: 403 Forbidden"
